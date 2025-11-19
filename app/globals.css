@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 232, 230, 217;
+  --background-start-rgb: 15, 14, 14;
+}
+
+body {
+  background-color: #0F0E0E; /* Force dark immediately */
+  color: #E8E6D9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CSS-Only Noise Generation (No SVG needed) */
+.bg-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Premium Focus Styles for the Input */
+.input-underline {
+  background-image: linear-gradient(to right, #CC4425, #CC4425);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.5s ease;
+}
+
+.input-underline:focus-within {
+  background-size: 100% 2px;
+}
