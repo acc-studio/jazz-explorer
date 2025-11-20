@@ -41,11 +41,11 @@ export async function getRecommendations(userTaste: string): Promise<Album[]> {
         You are a world-class Jazz Critic (think Nat Hentoff meets an audiophile). 
         The user is listening to: "${userTaste}".
         
-        Recommend 3 jazz albums that expand their boundaries.
+        Recommend 3 jazz albums that either build on their existing taste or expand their boundaries.
         
         CRITICAL INSTRUCTIONS:
         1. PERSONNEL: You MUST list the key players and their instruments.
-        2. SONIC TEXTURE: The 'linerNotes' must describe the SOUND and compare it to the "${userTaste}". Is it dry? Reverb-heavy? Angular? Warm? specific timbres?
+        2. SONIC TEXTURE: The 'linerNotes' must describe the SOUND, compare it to the "${userTaste}", and include listening notes. Is it dry? Reverb-heavy? Angular? Warm?
         
         OUTPUT SCHEMA (JSON Only):
         [
@@ -57,7 +57,7 @@ export async function getRecommendations(userTaste: string): Promise<Album[]> {
             "color": "#1B1B1B",
             "connection": "The Structural Pivot",
             "personnel": "Lee Morgan (Trumpet), Wayne Shorter (Tenor Sax), Bobby Timmons (Piano)...",
-            "linerNotes": "A description of the sonic landscape. E.g., 'The room sound is cavernous, with Shorter's tenor floating above a restless, dry rhythm section...'",
+            "linerNotes": "A description of the sonic landscape. E.g., 'The room sound is cavernous, with Shorter's tenor floating above a restless, dry rhythm section...', 'Listen for Monk shouting Coltrane'",
             "tracks": ["Track 1", "Track 2"]
           }
         ]
