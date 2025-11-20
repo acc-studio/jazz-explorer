@@ -10,8 +10,8 @@ const genAI = new GoogleGenerativeAI(apiKey || "");
 
 // 2. Strategy: Try the high-capacity models first.
 const MODEL_CANDIDATES = [
-  "gemini-pro-latest",       // Fastest, highest capacity
-  "gemini-flash-latest",    // New lightweight model
+  "gemini-flash-latest",     // Fastest, highest capacity
+  "gemini-pro-latest",      // New lightweight model
   "gemini-1.5-pro",         // Smarter, but sometimes slower
   "gemini-pro"              // Legacy fallback
 ];
@@ -56,7 +56,7 @@ export async function getRecommendations(userTaste: string): Promise<Album[]> {
             "year": "1999",
             "color": "#1B1B1B",
             "connection": "The Structural Pivot",
-            "personnel": "Lee Morgan (tpt), Wayne Shorter (ts), Bobby Timmons (p)...",
+            "personnel": "Lee Morgan (Trumpet), Wayne Shorter (Tenor Sax), Bobby Timmons (Piano)...",
             "linerNotes": "A description of the sonic landscape. E.g., 'The room sound is cavernous, with Shorter's tenor floating above a restless, dry rhythm section...'",
             "tracks": ["Track 1", "Track 2"]
           }
